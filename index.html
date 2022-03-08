@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header class="header">
+    <header id="up" class="header">
       <div class="header__top">
         <a class="header__logo logo" href="#">
           <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 834.94 969.38">
@@ -72,6 +72,13 @@
           <strong>JavaScript</strong> — высокоуровневый язык программирования, который поддерживает императивный, функциональный, событийно-ориентированный и другие подходы. Относится к языкам с
           динамической типизацией, входит в группу интерпретируемых языков.
         </p>
+
+        <figure class="section__image image">
+          <picture>
+            <img src="img/500px-JavaScript-logo.png" alt="Изображение логотипа JavaScript" width="500" height="500" />
+          </picture>
+          <figcaption class="image__caption">Логотип JavaScript</figcaption>
+        </figure>
         <p class="section__text">
           Синтаксис в определенной степени основан на <b>Java</b>, но в остальном языки не связаны. JavaScript получает свои первоклассные функции от языка функционального программирования
           <b>Scheme</b>, а основанное на прототипах наследование — от малоизвестного языка объектно-ориентированного программирования <b>Self</b>.
@@ -205,6 +212,8 @@
             <a class="section__link" href="https://nextjs.org/" target="_blank">Next.js</a>).
           </li>
         </ul>
+
+        <a class="section__link" href="https://2021.stateofjs.com/ru-RU/libraries">Результаты опроса <strong>State of JavaScript 2021</strong>, в котором приняли участие больше 16 000 разработчиков со всего мира. Демография, возможности, библиотеки, инструменты, ресурсы, взгляды и другое.</a>
       </section>
 
       <section id="application" class="section">
@@ -406,6 +415,10 @@
     <footer class="footer">
       <p class="footer-info">Санкт-Петербург, 2022 г.</p>
     </footer>
+
+    <a class="up" href="#up" title="Наверрх">
+      <span class="visually-hidden">Наверх</span>
+    </a>
 
     <script src="js/scroll.js"></script>
   </body>
