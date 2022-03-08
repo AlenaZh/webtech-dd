@@ -4,10 +4,409 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>JavaScript</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <header class="header">
+      <div class="header__top">
+        <a class="header__logo logo" href="#">
+          <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 834.94 969.38">
+            <path
+              d="m660.06 226.35 3.35 28.77 11.29 96H793l-11.16-96-19.33-163.84s-27.16 4.59-80.51 12.78C634.51 62 589.87 36.46 548.44 21.21 505.65 5.58 466.34.74 430.62 0v400.6l33.11 29.4 84.71 75.28 47.63 42.54 113.48 100.83L548.44 753V570H430.62v399.38l117.82-76.27 252.27-163.47 34.23-22.2-13.77-117.08-47.87-42.54-84.34-75L640.84 430l-92.4-82.23v-197c18.73 10.92 36.84 24.69 55.69 41.31l41.17 36.46Z"
+            />
+            <path d="M286.5 150.81V21.21C329.29 5.58 368.6.74 404.32 0v969.38L286.5 893.11 36.09 730.88 0 707.44l10.91-92.77 123.78-45.76-9.3 79.62 48.37 31.38L286.5 753V150.81Z" />
+          </svg>
+        </a>
+      </div>
+      <div class="start">
+        <div class="start__left">
+          <figure class="start__quote quote">
+            <blockquote class="quote__text">
+              Любое приложение, которое может быть написано на <span class="quote__highlight">JavaScript</span>, в конечном итоге будет написано на <span class="quote__highlight">JavaScript</span>
+            </blockquote>
+            <figcaption class="quote__caption">Джефф Этвуд</figcaption>
+          </figure>
+        </div>
+        <nav class="navigation">
+          <ol class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#introduction">Введение</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#ecma">ECMAScript</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#features">Особенности</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#application">Сферы применения</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#popularity">Популярность</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#over">Языки «над» JavaScript</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#surprise">Что за черт, Javascript!</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#sources">Полезные материалы</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <h1 class="visually-hidden">JavaScript. Обзор технологии.</h1>
+      <section id="introduction" class="section">
+        <h2 class="section__title">Введение</h2>
+
+        <p class="section__text">
+          <strong>JavaScript</strong> — высокоуровневый язык программирования, который поддерживает императивный, функциональный, событийно-ориентированный и другие подходы. Относится к языкам с
+          динамической типизацией, входит в группу интерпретируемых языков.
+        </p>
+        <p class="section__text">
+          Синтаксис в определенной степени основан на <b>Java</b>, но в остальном языки не связаны. JavaScript получает свои первоклассные функции от языка функционального программирования
+          <b>Scheme</b>, а основанное на прототипах наследование — от малоизвестного языка объектно-ориентированного программирования <b>Self</b>.
+        </p>
+        <p class="section__text">
+          JavaScript создавался как скриптовый язык для Netscape. После чего он был отправлен в ECMA International для стандартизации (ECMA — это ассоциация, деятельность которой посвящена
+          стандартизации информационных и коммуникационных технологий). Это привело к появлению нового языкового стандарта, известного как
+          <a class="section__link" href="https://tc39.es/ecma262/" target="_blank"><strong>&laquo;ECMAScript&raquo;</strong> </a>.
+        </p>
+        <p class="section__text">
+          Последующие версии JavaScript уже были основаны на стандарте ECMAScript. Проще говоря, ECMAScript — стандарт, а JavaScript — самая популярная реализация этого стандарта.
+        </p>
+      </section>
+
+      <section id="ecma" class="section">
+        <h2 class="section__title">ECMAScript</h2>
+        <p class="section__text">
+          <strong>ES</strong> — это просто сокращение для ECMAScript. Каждое издание ECMAScript получает аббревиатуру ES с последующим его номером. Всего существует 13 версий ECMAScript.
+        </p>
+        <p class="section__text">
+          С 2015 года ECMA International перешла на ежегодные релизы ECMAScript, и эту версию ECMAScript переименовали с ES6 на ES2015. ECMA International стала называть новые версии спецификации
+          ECMAScript в соответствии с годом выпуска. То есть ES6 и ES2015 — это одно и то же.
+        </p>
+
+        <table class="section__table">
+          <tr>
+            <td>ES12</td>
+            <td>ES2021</td>
+            <td>Июнь 2021</td>
+          </tr>
+          <tr>
+            <td>ES11</td>
+            <td>ES2020</td>
+            <td>Июнь 2020</td>
+          </tr>
+          <tr>
+            <td>ES10</td>
+            <td>ES2019</td>
+            <td>Июнь 2019</td>
+          </tr>
+          <tr>
+            <td>ES9</td>
+            <td>ES2018</td>
+            <td>Июнь 2018</td>
+          </tr>
+          <tr>
+            <td>ES8</td>
+            <td>ES2017</td>
+            <td>Июнь 2017</td>
+          </tr>
+          <tr>
+            <td>ES7</td>
+            <td>ES2016</td>
+            <td>Июнь 2016</td>
+          </tr>
+          <tr>
+            <td>ES6</td>
+            <td>ES2015</td>
+            <td>Июнь 2015</td>
+          </tr>
+          <tr>
+            <td>ES5.1</td>
+            <td>ES5.1</td>
+            <td>Июнь 2011</td>
+          </tr>
+          <tr>
+            <td>ES5</td>
+            <td>ES5</td>
+            <td>Декабрь 2009</td>
+          </tr>
+          <tr>
+            <td>ES4</td>
+            <td>ES4</td>
+            <td>Заброшен</td>
+          </tr>
+          <tr>
+            <td>ES3</td>
+            <td>ES3</td>
+            <td>Декабрь 1999</td>
+          </tr>
+          <tr>
+            <td>ES2</td>
+            <td>ES2</td>
+            <td>Июнь 1998</td>
+          </tr>
+          <tr>
+            <td>ES1</td>
+            <td>ES1</td>
+            <td>Июнь 1997</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="features" class="section">
+        <h2 class="section__title">Особенности</h2>
+
+        <p class="section__text">В число основных особенностей JS входят:</p>
+        <ul>
+          <li><strong> Динамическая типизация </strong> — тип данных определяется в момент присваивания значения константе или переменной.</li>
+
+          <li><strong>Интерпретируемый язык</strong> — код приложения интерпретируется при обращении, не требуется предварительная компиляция.</li>
+          <li>
+            <strong>Функции как объекты первого класса</strong>, то есть функции в JavaScript можно возвращать из функций, передавать в качестве параметров в другие функции, присваивать переменным.
+          </li>
+          <li>Event Loop / Однопоточность</li>
+          <li>Поддержка прототипного и объектно-ориентированного подхода.</li>
+          <li><strong>Универсальность</strong> — все популярные браузеры поддерживают JavaScript.</li>
+        </ul>
+        <p class="section__text">
+          <strong>ES12</strong>, современная спецификация JavaScript, поддерживает синтаксис стрелочных функций, дестракчеринг, операторы spread и rest, модули и классы. Эти и другие инструменты
+          делают JavaScript гибким и выразительным языком программирования.
+        </p>
+        <p class="section__text">
+          Важная особенность JavaScript — <strong>развитая инфраструктура</strong>. Вокруг этого языка программирования сформировано многочисленное сообщество. Разработчикам доступен широкий выбор
+          инструментов, например:
+        </p>
+        <ul>
+          <li>
+            Библиотеки и фреймворки для создания приложений (<a class="section__link" href="https://vuejs.org/" target="_blank">Vue</a>,
+            <a class="section__link" href="https://svelte.dev/" target="_blank">Svelte</a>, <a class="section__link" href="https://ru.reactjs.org/" target="_blank">React</a>).
+          </li>
+          <li>
+            Сборщики и таск-менеджеры (<a class="section__link" href="https://webpack.js.org/" target="_blank">Webpack</a>,
+            <a class="section__link" href="https://gulpjs.com/" target="_blank">Gulp</a>).
+          </li>
+          <li>
+            Вспомогательные библиотеки (<a class="section__link" href="https://lodash.com/">Lodash</a>, <a class="section__link" href="https://underscorejs.org/" target="_blank">Underscore</a>).
+          </li>
+          <li>
+            Генераторы статических сайтов (<a class="section__link" href="https://www.gatsbyjs.com/" target="_blank">Gatsby.js</a>,
+            <a class="section__link" href="https://nextjs.org/" target="_blank">Next.js</a>).
+          </li>
+        </ul>
+      </section>
+
+      <section id="application" class="section">
+        <h2 class="section__title">Сферы применения</h2>
+
+        <p class="section__text">
+          В первую очередь JavaScript широко используется во <strong>фронтенд-разработке</strong>. Этот язык вместе с <a class="section__link" href="https://html.spec.whatwg.org/multipage/">HTML</a> и
+          <a class="section__link" href="https://www.w3.org/Style/CSS/specs.en.html">CSS</a> входит в базовый набор инструментов фронтендера. На JavaScript создаются приложения, которые исполняются в
+          браузере на стороне клиента. Они обеспечивают интерактивность сайтов. Например, когда пользователь заполняет форму и нажимает кнопку «Подписаться», мгновенная реакция на это действие обычно
+          обеспечивается кодом, написанным на JavaScript.
+        </p>
+        <p class="section__text">Сферы применения JavaScript не ограничиваются браузерами и веб-приложениями. На этом языке, например, можно:</p>
+        <ul>
+          <li>
+            Разрабатывать нативные приложения. Например, с помощью фреймворка <a class="section__link" href="https://reactnative.dev/" target="_blank">React Native</a> создаются приложения для Android
+            и iOS.
+          </li>
+          <li>Серверные приложения. <a class="section__link" href="https://nodejs.org/en/" target="_blank">Node.js</a> применяется для бэкенд-разработки.</li>
+          <li>Десктопные приложения. JS применяется в офисных пакетах Microsoft и OpenOffice, в приложениях компании Adobe.</li>
+          <li>Программировать оборудование и бытовую технику, например, платёжные терминалы и телевизионные приставки.</li>
+        </ul>
+      </section>
+
+      <section id="popularity" class="section">
+        <h2 class="section__title">Популярность</h2>
+
+        <p class="section__text">
+          JavaScript входит в число самых популярных языков программирования. В марте 2022 года JS занимает <strong>седьмое место</strong> в индексе
+          <a class="section__link" href="https://www.tiobe.com/tiobe-index/" target="_blank">TIOBE</a>, который составляется на основе статистики поисковых запросов. Этот язык популярнее, чем PHP,
+          Swift, Ruby, Go.
+        </p>
+      </section>
+
+      <section id="over" class="popularity section">
+        <h2 class="section__title">Языки «над» JavaScript</h2>
+
+        <p class="section__text">Существует много языков, которые транспилируются (конвертируются) в JavaScript, прежде чем запустятся в браузере.</p>
+        <p class="section__text">
+          Современные инструменты делают транспиляцию очень быстрой и прозрачной, фактически позволяя разработчикам писать код на другом языке, автоматически преобразуя его в JavaScript «под капотом».
+        </p>
+        <p class="section__text">Примеры таких языков:</p>
+
+        <ul>
+          <li>
+            <a class="section__link" href="https://www.typescriptlang.org/" target="_blank"><strong>TypeScript</strong></a> концентрируется на добавлении «строгой типизации» для упрощения разработки и
+            поддержки больших и сложных систем. Разработан Microsoft.
+          </li>
+          <li>
+            <a class="section__link" href="https://dart.dev/" target="_blank"><strong>Dart</strong></a> стоит особняком, потому что имеет собственный движок, работающий вне браузера (например, в
+            мобильных приложениях). Первоначально был предложен Google, как замена JavaScript, но на данный момент необходима его транспиляция для запуска так же, как для вышеперечисленных языков.
+          </li>
+          <li>
+            <a class="section__link" href="https://flow.org/" target="_blank"><strong>Flow</strong></a> тоже добавляет типизацию, но иначе. Разработан Facebook.
+          </li>
+          <li>
+            <a class="section__link" href="https://brython.info/" target="_blank"><strong>Brython</strong></a> транспилирует Python в JavaScript, что позволяет писать приложения на чистом Python без
+            JavaScript.
+          </li>
+        </ul>
+      </section>
+
+      <section id="surprise" class="section">
+        <h2 class="section__title">Что за черт, Javascript!</h2>
+
+        <figure class="section__image image">
+          <picture>
+            <img src="img/js-m.png" alt="Нестандартное поведение JS" width="500" height="760" />
+          </picture>
+          <figcaption class="image__caption">WAT?!</figcaption>
+        </figure>
+        <p class="section__text">JavaScript довольно забавный язык, в котором есть хитрые вещи. Некоторые из них быстро превращают нашу повседневную работу в ад, а некоторые заставляют хохотать.</p>
+
+        <article class="section__article article">
+          <h3 class="article__title">[] эквивалентно ![]</h3>
+          <p class="article__text">Массив эквивалентен не массиву:</p>
+          <pre class="code"><code>[] == ![] <span class="code__comment">// -> true </span></code></pre>
+        </article>
+
+        <article class="section__article article">
+          <h3 class="article__title">baNaNa</h3>
+          <pre
+            class="code"
+          ><code>(<span class="code__string">'b'</span> + <span class="code__string">'a'</span> + + <span class="code__string">'a'</span> + <span class="code__string">'a'</span>).<span class="code__method">toLowerCase</span>(); <span class="code__comment"> &sol;&sol; banana </span></code></pre>
+        </article>
+
+        <article class="section__article article">
+          <h3 class="article__title">NaN не является NaN</h3>
+          <pre class="code"><code><span class="code__literal">NaN</span> === <span class="code__literal">NaN</span> <span class="code__comment">// -> false</span></code></pre>
+        </article>
+
+        <article class="section__article article">
+          <h3 class="article__title">Сложение массивов</h3>
+          <p class="article__text">Что если попробовать сложить два массива?</p>
+          <pre
+            class="code"
+          ><code>[<span class="code__number">1</span>, <span class="code__number">2</span>, <span class="code__number">3</span>] + [<span class="code__number">4</span>, <span class="code__number">5</span>, <span class="code__number">6</span>] <span class="code__comment">// -> '1,2,34,5,6'</span></code></pre>
+        </article>
+
+        <article class="section__article article">
+          <h3 class="article__title">Эквивалентность массивов — это монстр!</h3>
+          <pre class="code"><code>[] == <span class="code__string">''</span>   <span class="code__comment">// -> true</span>
+[] == <span class="code__number">0</span>    <span class="code__comment">// -> true</span>
+[<span class="code__string">''</span>] == <span class="code__string">''</span> <span class="code__comment">// -> true</span>
+[<span class="code__number">0</span>] ==<span class="code__number"> 0</span>   <span class="code__comment">// -> true</span>
+[<span class="code__number">0</span>] == <span class="code__string">''</span>  <span class="code__comment">// -> false</span>
+[<span class="code__string">''</span>] == <span class="code__number">0</span>  <span class="code__comment">// -> true</span>
+
+[<span class="code__literal">null</span>] == <span class="code__string">''</span>      <span class="code__comment">// true</span>
+[<span class="code__literal">null</span>] ==<span class="code__number"> 0</span>       <span class="code__comment">// true</span>
+[<span class="code__literal">undefined</span>] == <span class="code__string">''</span> <span class="code__comment">// true</span>
+[<span class="code__literal">undefined</span>] == <span class="code__number">0</span>  <span class="code__comment">// true</span>
+
+[[]] == <span class="code__number">0</span>  <span class="code__comment">// true</span>
+[[]] == <span class="code__string">''</span> <span class="code__comment">// true</span>
+
+[[[[[[]]]]]] == <span class="code__string">''</span> <span class="code__comment">// true</span>
+[[[[[[]]]]]] == <span class="code__number">0</span>  <span class="code__comment">// true</span>
+
+[[[[[[ <span class="code__literal">null</span> ]]]]]] == <span class="code__number">0</span>  <span class="code__comment">// true</span>
+[[[[[[ <span class="code__literal">null</span> ]]]]]] == <span class="code__string">''</span> <span class="code__comment">// true</span>
+
+[[[[[[ <span class="code__literal">undefined</span> ]]]]]] == <span class="code__number">0</span>  <span class="code__comment">// true</span>
+[[[[[[ <span class="code__literal">undefined</span> ]]]]]] == <span class="code__string">''</span> <span class="code__comment">// true</span></code></pre>
+        </article>
+
+        <article class="section__article article">
+          <h3 class="article__title">Вычисления с помощью true и false</h3>
+          <pre class="code"><code><span class="code__literal">true</span> + <span class="code__literal">true</span>; <span class="code__comment">// -> 2</span>
+(<span class="code__literal">true</span>  + <span class="code__literal">true</span> ) * (<span class="code__literal">true</span>  + <span class="code__literal">true</span> ) - <span class="code__literal">true</span> ; <span class="code__comment">// -> 3</span></code></pre>
+        </article>
+
+        <article class="section__article article">
+          <h3 class="article__title">Забавная математика</h3>
+
+          <p class="article__text">Зачастую результаты математических операций в JavaScript могут быть весьма неожиданными.</p>
+          <pre class="code"><code><span class="code__number">3</span> - <span class="code__number">1</span>   <span class="code__comment">// -> 2</span> 
+<span class="code__number">3</span> + <span class="code__number">1</span>   <span class="code__comment">// -> 4</span> 
+<span class="code__string">'3'</span> - <span class="code__number">1</span>  <span class="code__comment">// -> 2</span> 
+<span class="code__string">'3'</span> + <span class="code__number">1</span>  <span class="code__comment">// -> '31'</span> 
+           
+ <span class="code__string">''</span> + <span class="code__string">'' </span> <span class="code__comment">// -> ''</span> 
+[] + []  <span class="code__comment">// -> ''</span> 
+{} + []  <span class="code__comment">// -> 0</span> 
+[] + {}  <span class="code__comment">// -> '[object Object]'</span> 
+{} + {}  <span class="code__comment">// -> '[object Object][object Object]'</span> 
+           
+<span class="code__string">'222</span> - -<span class="code__string">'111'</span>  <span class="code__comment">// -> 333</span> 
+           
+[<span class="code__number">4</span>] * [<span class="code__number">4</span>]        <span class="code__comment">// -> 16</span> 
+[] * []          <span class="code__comment">// -> 0</span> 
+[<span class="code__number">4</span>, <span class="code__number">4</span>] * [<span class="code__number">4</span>, <span class="code__number">4</span>]  <span class="code__comment">// NaN</span></code></pre>
+        </article>
+      </section>
+
+      <section id="sources" class="section">
+        <h2 class="section__title">Полезные материалы</h2>
+
+        <div class="sources">
+          <ul class="sources__list">
+            <li class="sources__item sources__item--type--document">
+              <a class="sources__link" href="https://tc39.es/ecma262/" target="_blank">ECMAScript&reg; 2022 Language Specification</a>
+            </li>
+            <li class="sources__item sources__item--type--document">
+              <a class="sources__link" href="https://developer.mozilla.org/ru/docs/Web/JavaScript" target="_blank">JavaScript - MDN Web Docs - Mozilla</a>
+            </li>
+            <li class="sources__item sources__item--type--document">
+              <a class="sources__link" href="https://doka.guide/" target="_blank">Дока</a>
+            </li>
+            <li class="sources__item sources__item--type--guide">
+              <a class="sources__link" href="https://github.com/miguelmota/javascript-idiosyncrasies" target="_blank">Особенности JS</a>
+            </li>
+            <li class="sources__item sources__item--type--guide">
+              <a class="sources__link" href="https://github.com/denysdovhan/wtfjs#-is-truthy-but-not-true" target="_blank">Что за черт, Javascript!(ENG)</a>
+            </li>
+            <li class="sources__item sources__item--type--book">
+              <a class="sources__link" href="https://github.com/azat-io/you-dont-know-js-ru" target="_blank">Вы не знаете JS. Кайл Симпсон (серия книг)</a>
+            </li>
+            <li class="sources__item sources__item--type--book">
+              <a class="sources__link" href="http://www.williamspublishing.com/Books/978-5-907203-79-2.html" target="_blank">JavaScript. Полное руководство. 7-е издание. Дэвид Флэнаган</a>
+            </li>
+            <li class="sources__item sources__item--type--book">
+              <a class="sources__link" href="https://dmkpress.com/catalog/computer/programming/java/978-5-97060-177-8/" target="_blank">Современный JavaScript для нетерпеливых. Хорстман К.</a>
+            </li>
+            <li class="sources__item sources__item--type--book">
+              <a class="sources__link" href="https://www.piter.com/collection/bestsellery-no-starch-press/product/ecmascript-6-dlya-razrabotchikov" target="_blank"
+                >ECMAScript 6 для разработчиков. Николас Закас</a
+              >
+            </li>
+            <li class="sources__item sources__item--type--book">
+              <a class="sources__link" href="https://www.piter.com/product_by_id/142132749?recommended_by=dynamic&recommended_code=46ce9b64036c53acd60bfc7a38ecdaf2" target="_blank"
+                >Выразительный JavaScript. Современное веб-программирование. Хавербеке М.</a
+              >
+            </li>
+          </ul>
+        </div>
+        <p class="section__text"></p>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer-info">Санкт-Петербург, 2022 г.</p>
+    </footer>
+
+    <script src="js/scroll.js"></script>
   </body>
 </html>
