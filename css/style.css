@@ -4,8 +4,8 @@
   font-family: "montserrat";
 
   src: local("montserrat-black"),
-    url("../fonts/montserrat-black.woff2") format("woff2"),
-    url("../fonts/montserrat-black.woff") format("woff");
+  url("../fonts/montserrat-black.woff2") format("woff2"),
+  url("../fonts/montserrat-black.woff") format("woff");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-family: "anonymouspro";
 
   src: local("anonymouspro-regular"),
-    url("../fonts/anonymouspro-regular.woff2") format("woff2"),
-    url("../fonts/anonymouspro-regular.woff") format("woff");
+  url("../fonts/anonymouspro-regular.woff2") format("woff2"),
+  url("../fonts/anonymouspro-regular.woff") format("woff");
 }
 
 @font-face {
@@ -24,8 +24,8 @@
   font-family: "roboto";
 
   src: local("roboto-light"),
-    url("../fonts/roboto-light.woff2") format("woff2"),
-    url("../fonts/roboto-light.woff") format("woff");
+  url("../fonts/roboto-light.woff2") format("woff2"),
+  url("../fonts/roboto-light.woff") format("woff");
 }
 
 @font-face {
@@ -34,8 +34,8 @@
   font-family: "roboto";
 
   src: local("roboto-bold"),
-    url("../fonts/roboto-bold.woff2") format("woff2"),
-    url("../fonts/roboto-bold.woff") format("woff");
+  url("../fonts/roboto-bold.woff2") format("woff2"),
+  url("../fonts/roboto-bold.woff") format("woff");
 }
 
 
@@ -45,8 +45,8 @@
   font-family: "roboto";
 
   src: local("roboto-black"),
-    url("../fonts/roboto-black.woff2") format("woff2"),
-    url("../fonts/roboto-black.woff") format("woff");
+  url("../fonts/roboto-black.woff2") format("woff2"),
+  url("../fonts/roboto-black.woff") format("woff");
 }
 
 
@@ -187,7 +187,6 @@ img {
 
 .navigation__item:hover {
   color: #ffef99;
-  ;
 }
 
 .navigation__item:active {
@@ -252,7 +251,6 @@ img {
 .section__link:hover {
   color: #f0db4f;
 }
-
 
 .section__table {
   width: 600px;
@@ -433,7 +431,7 @@ img {
 
 @media (max-width: 1500px) {
   .up {
-    right: 10px;
+    right: 20px;
     left: initial;
 
     transform: none;
@@ -544,6 +542,10 @@ img {
   .article__title {
     font-size: 26px;
   }
+
+  .up {
+    bottom: 25px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -554,7 +556,13 @@ img {
   }
 
   .code {
+    padding: 20px;
+
     font-size: 16px;
+  }
+
+  .section__list {
+    padding-left: 24px;
   }
 }
 
