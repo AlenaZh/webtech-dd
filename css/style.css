@@ -523,6 +523,10 @@ img {
     font-size: 18px;
   }
 
+  .header__top {
+    text-align: center;
+  }
+
   .start {
     padding: 0 20px;
   }
@@ -540,6 +544,8 @@ img {
   }
 
   .article__title {
+    padding-left: 14px;
+
     font-size: 26px;
   }
 
